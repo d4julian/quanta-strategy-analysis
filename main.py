@@ -2,7 +2,6 @@ import streamlit as st
 import yfinance as yf
 import pandas as pd
 from datetime import datetime, timedelta
-from io import StringIO
 
 def fetch(ticker: str, start: str, end: str) -> pd.DataFrame:
     data = yf.download(ticker, start=start, end=end, auto_adjust=True)
