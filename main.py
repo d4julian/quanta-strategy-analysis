@@ -37,12 +37,11 @@ def generate_charts(data: pd.DataFrame, title: str, mean_return: float):
         x=alt.X(
             "index:O",
             title="Trade (Chronological Order)",
-            axis=alt.Axis(labelColor="black", titleColor="black", labelAngle=360),
+            axis=alt.Axis(labelAngle=360),
         ),
         y=alt.Y(
             "Return %:Q",
             title="Return %",
-            axis=alt.Axis(labelColor="black", titleColor="black")
         ),
         color=alt.condition(
             alt.datum["Return %"] > 0,
